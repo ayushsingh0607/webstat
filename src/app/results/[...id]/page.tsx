@@ -5,6 +5,8 @@ import Image from 'next/image';
 import moment from 'moment';
 import CircularProgress from '@mui/material/CircularProgress';
 
+export const runtime = "edge";
+
 const page = () => {
 
   const [alldata, setAlldata] = useState<any[]>([]);

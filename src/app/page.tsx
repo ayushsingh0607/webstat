@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import axios from 'axios';
 import Image from 'next/image';
 
+export const runtime = "edge"
 
 const page = () => {
   const [url, setUrl] = useState('');
