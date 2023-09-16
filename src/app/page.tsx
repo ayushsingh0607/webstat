@@ -26,7 +26,6 @@ const page = () => {
         'content-type': 'application/json'
       }
     })
-    // console.log(data);
     const scoredata = { id: data.tasks[0].id, result: data.tasks[0].result[0]}
     localStorage.setItem("score", JSON.stringify(scoredata));
     router.push(`/results/${url.replace("https://", "")}`)

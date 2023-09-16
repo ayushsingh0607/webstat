@@ -14,7 +14,6 @@ const page = () => {
     const score = JSON.parse(localStorage.getItem("score") || "[]")
     alldata.push(score)
     setAlldata([...alldata]);
-    console.log(alldata);
     const options = [{
       url:alldata[0]?.result?.finalUrl,
       enable_javascript:true,
@@ -32,7 +31,6 @@ const page = () => {
         'content-type': 'application/json'
       }
     })
-    console.log(data)
     newdata.push(data.tasks[0].result[0])
     setNewdata([...newdata])
   }
@@ -51,7 +49,7 @@ const page = () => {
           <span className='text-[48px] text-white font-[700] absolute left-12 top-10'>{Math.round(newdata[0]?.items[0]?.["onpage_score"]) || 0}</span>
         </div>
         <span className='text-white'>{(alldata[0]?.result?.finalUrl)?.replace("https://", "")}</span>
-        <div className='flex flex-col gap-10'>
+        <div className='flex flex-col gap-7'>
           <div>
             <div className='flex justify-between'>
               <span className='text-white text-[14px] font-[400] uppercase'>Performance</span>
